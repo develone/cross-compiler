@@ -1,0 +1,259 @@
+https://solarianprogrammer.com/2018/05/06/building-gcc-cross-compiler-raspberry-pi/
+pi@mypi3-8:~/cross-compiler $ gcc --version
+gcc (Raspbian 6.3.0-18+rpi1+deb9u1) 6.3.0 20170516
+Copyright (C) 2016 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+2001  mkdir testbuilds/gcc_all
+ 2002  cd testbuilds/gcc_all/
+ 2003  wget https://ftpmirror.gnu.org/binutils/binutils-2.28.tar.bz2
+ 2004  wget https://ftpmirror.gnu.org/gcc/gcc-6.3.0/gcc-6.3.0.tar.gz
+ 2005  wget https://ftpmirror.gnu.org/gcc/gcc-9.1.0/gcc-9.1.0.tar.gz
+ 2006  git clone --depth=1 https://github.com/raspberrypi/linux
+ 2007  tar xf binutils-2.28.tar.bz2
+ 2008  tar xf glibc-2.24.tar.bz2
+ 2009  ls
+ 2010  tar xf gcc-6.3.0.tar.gz
+ 2011  wget https://ftpmirror.gnu.org/glibc/glibc-2.24.tar.bz2
+ 2012  tar xf glibc-2.24.tar.bz2
+ 2013  ls
+ 2014  ar xf gcc-9.1.0.tar.gz
+ 2015  tar xf gcc-9.1.0.tar.gz
+ 2016  ls
+ 2017  df
+ 2018  rm *.tar.*
+ 2019  ls -la
+ 2020  mkdir build-binutils
+ 2021  cd build-binutils/
+ 2022  ls
+ 2023  ../binutils-2.28/configure --prefix=/opt/cross-pi-gcc --target=arm-linux-gnueabihf --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2024  ../binutils-2.28/configure --prefix=/home/vidal/testbuilds/cross-pi-gcc --target=arm-linux-gnueabihf --with-arch=armv7 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2025  make -j 4
+ 2026  make install
+ 2027  cd ../
+ 2028  ls
+ 2029  mkdir build-gcc
+ 2030  ls
+ 2031  cd gcc-6.3.0/
+ 2032  cd gcc
+ 2033  nano ubsan.c
+ 2034  cp ubsan.c ubsan.c.orig
+ 2035  nano ubsan.c
+ 2036  vi ubsan.c
+ 2037  cd ../../
+ 2038  cd build-gcc
+ 2039  ../binutils-2.28/configure --prefix=/opt/cross-pi-gcc --target=arm-linux-gnueabihf --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2040  ../binutils-2.28/configure --prefix=/home/vidal/testbuilds/cross-pi-gcc --target=arm-linux-gnueabihf --with-arch=armv7 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2041  make -j 4 all-gcc
+ 2042  make install-gcc
+ 2043  ls ~/testbuilds/
+ 2044  ls ~/testbuilds/cross-pi-gcc/
+ 2045  cd ../
+ 2046  mkdir build-glibc
+ 2047  cd build-glibc/
+ 2048  ../glibc-2.24/configure --prefix=/opt/cross-pi-gcc/arm-linux-gnueabihf --build=$MACHTYPE --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf --with-arch=armv7 --with-fpu=vfp --with-float=hard --with-headers=/home/vidal/testbuilds/cross-pi-gcc/arm-linux-gnueabihf/include --disable-multilib libc_cv_forced_unwind=yes
+ 2049  make -j 4 csu/subdir_lib
+ 2050  cd ..
+ 2051  make -j 4 gcc-all
+ 2052  cd build-gcc
+ 2053  make -j 4 gcc-all
+ 2054  ls
+ 2055  histtory
+ 2056  history
+ 2057  ../gcc-6.3.0/configure --prefix=/opt/cross-pi-gcc --target=arm-linux-gnueabihf --enable-languages=c,c++,fortran --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2058  ../gcc-6.3.0/configure --prefix=/ophome/vidal/testbuilds/cross-pi-gcc --target=arm-linux-gnueabihf --enable-languages=c,c++,fortran --with-arch=armv7 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2059  make -j 4 gcc-all
+ 2060  make clean
+ 2061  make -j 4 gcc-all
+ 2062  ../gcc-6.3.0/configure --prefix=/ophome/vidal/testbuilds/cross-pi-gcc --target=arm-linux-gnueabihf --enable-languages=c,c++,fortran --with-arch=armv7 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2063  make -j 4 
+ 2064  ../gcc-6.3.0/configure --prefix=/home/vidal/testbuilds/cross-pi-gcc --target=arm-linux-gnueabihf --enable-languages=c,c++,fortran --with-arch=armv7 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2065  make -j 4 all
+ 2066  make clean
+ 2067  cd ../
+ 2068  rm -rf build-gcc
+ 2069  mkdir build-gcc
+ 2070  cd build-gcc/
+ 2071  ../gcc-6.3.0/configure --prefix=/home/vidal/testbuilds/cross-pi-gcc --target=arm-linux-gnueabihf --enable-languages=c,c++,fortran --with-arch=armv7 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2072  make -j 4
+ 2073  cd ../
+ 2074  rm -rf build-gcc
+ 2075  mkdir build-gcc
+ 2076  cd build-gcc
+ 2077  ../gcc-6.3.0/configure --prefix=/home/vidal/testbuilds/cross-pi-gcc --target=arm-linux-gnueabihf --enable-languages=c,c++,fortran --with-arch=armv7 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2078  make -j 4 all-gcc
+ 2079  make install-all
+ 2080  make install
+ 2081  ls ~/testbuilds/cross-pi-gcc/
+ 2082  ls ~/testbuilds/cross-pi-gcc/bin
+ 2083  cd ~/testbuilds/cross-pi-gcc/bin/
+ 2084  ls
+ 2085  ./arm-linux-gnueabihf-gcc -c ~/testbuilds/catzip/sw/board/pi_jpeg.c 
+ 2086  less ~/testbuilds/catzip/sw/board/pi_jpeg.c 
+ 2087  ./arm-linux-gnueabihf-gcc -c ~/testbuilds/catzip/sw/board/pi_jpeg.c 
+ 2088  cd ~/testbuilds/gcc_all/build-glibc/
+ 2089  ../glibc-2.24/configure --prefix=/home/vidal/testbuilds/cross-pi-gcc/arm-linux-gnueabihf --build=$MACHTYPE --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf --with-arch=armv7 --with-fpu=vfp --with-float=hard --with-headers=/home/vidal/testbuilds/cross-pi-gcc/arm-linux-gnueabihf/include --disable-multilib libc_cv_forced_unwind=yes
+ 2090* 
+ 2091  ../glibc-2.24/configure --prefix=/home/vidal/testbuilds/cross-pi-gcc/arm-linux-gnueabihf --build=$MACHTYPE --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf --with-arch=armv7 --with-fpu=vfp --with-float=hard --with-headers=/home/vidal/testbuilds/cross-pi-gcc/arm-linux-gnueabihf/include --disable-multilib libc_cv_forced_unwind=yes
+ 2092  ls
+ 2093  cd ..
+ 2094  ls
+ 2095  wget https://ftpmirror.gnu.org/gcc/gcc-6.3.0/gcc-6.3.0.tar.gz
+ 2096  ls
+ 2097  tar xf gcc-6.3.0.tar.gz 
+ 2098  cd gcc-6.3.0/gcc/
+ 2099  cp ubsan.c ubsan.c.orig
+ 2100  nano ubsan.c
+ 2101  cd ../contrib/
+ 2102  ls
+ 2103  ls -la
+ 2104  cd ..
+ 2105  ls
+ 2106  cd linux/
+ 2107  KERNEL=kernel7
+ 2108  make ARCH=arm INSTALL_HDR_PATH=/home/vidal/testbuilds/cross-pi-gcc/arm-linux-gnueabihf headers_install
+ 2109  cd ../build-binutils/
+ 2110  ../binutils-2.28/configure --prefix=/home/vidal/testbuilds/cross-pi-gcc --target=arm-linux-gnueabihf --with-arch=armv7 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2111  sudo mkdir -p /opt/cross-pi-gcc
+ 2112  cd ~/testbuilds/
+ 2113  rm -rf cross-pi-gcc/
+ 2114  cd gcc_all/
+ 2115  cd build-binutils/
+ 2116  ../binutils-2.28/configure --prefix=/opt/cross-pi-gcc --target=arm-linux-gnueabihf --with-arch=armv7 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2117  cd ../
+ 2118  cd linux/
+ 2119  sudo chown $USER /opt/cross-pi-gcc
+ 2120  export PATH=/opt/cross-pi-gcc/bin:$PATH
+ 2121  KERNEL=kernel7
+ 2122  make ARCH=arm INSTALL_HDR_PATH=/opt/cross-pi-gcc/arm-linux-gnueabihf headers_install
+ 2123  cd ../build-binutils/
+ 2124  ../binutils-2.28/configure --prefix=/opt/cross-pi-gcc --target=arm-linux-gnueabihf --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2125  make -j 4
+ 2126  make install
+ 2127  cd ../build-gcc
+ 2128  ../gcc-6.3.0/configure --prefix=/opt/cross-pi-gcc --target=arm-linux-gnueabihf --enable-languages=c,c++,fortran --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2129  4 make -j8 all-gcc
+ 2130  make -j4 all-gcc
+ 2131  make install-all
+ 2132  make install
+ 2133  cd ../build-glibc/
+ 2134  ../glibc-2.24/configure --prefix=/opt/cross-pi-gcc/arm-linux-gnueabihf --build=$MACHTYPE --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf --with-arch=armv6 --with-fpu=vfp --with-float=hard --with-headers=/opt/cross-pi-gcc/arm-linux-gnueabihf/include --disable-multilib libc_cv_forced_unwind=yes
+ 2135  make install-bootstrap-headers=yes install-headers
+ 2136  make -j4 csu/subdir_lib
+ 2137  install csu/crt1.o csu/crti.o csu/crtn.o /opt/cross-pi-gcc/arm-linux-gnueabihf/lib
+ 2138  arm-linux-gnueabihf-gcc -nostdlib -nostartfiles -shared -x c /dev/null -o /opt/cross-pi-gcc/arm-linux-gnueabihf/lib/libc.so
+ 2139  touch /opt/cross-pi-gcc/arm-linux-gnueabihf/include/gnu/stubs.h
+ 2140  cd ../build-gcc/
+ 2141  make -j4
+ 2142  make clean
+ 2143  ../binutils-2.28/configure --prefix=/opt/cross-pi-gcc --target=arm-linux-gnueabihf --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2144  make -j4 all-gcc
+ 2145  make install
+ 2146  ../gcc-6.3.0/configure --prefix=/opt/cross-pi-gcc --target=arm-linux-gnueabihf --enable-languages=c,c++,fortran --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2147  make -j4 all-gcc
+ 2148  make -j4 install-all
+ 2149  make install
+ 2150  cd ..
+ 2151  ls
+ 2152  rm -rf build-binutils/*
+ 2153  rm -rf build-gcc/*
+ 2154  rm -rf build-glibc/
+ 2155  cd build-binutils/
+ 2156  ../binutils-2.28/configure --prefix=/opt/cross-pi-gcc --target=arm-linux-gnueabihf --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2157  make -j 4 
+ 2158  rm -rf *
+ 2159  cd ../
+ 2160  ls
+ 2161  cd linux/
+ 2162  KERNEL=kernel7
+ 2163  make ARCH=arm INSTALL_HDR_PATH=/opt/cross-pi-gcc/arm-linux-gnueabihf headers_install
+ 2164  cd ../build-binutils/
+ 2165  ../binutils-2.28/configure --prefix=/opt/cross-pi-gcc --target=arm-linux-gnueabihf --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2166  make -j 4
+ 2167  make install
+ 2168  cd ../build-gcc/
+ 2169  diff ../gcc-6.3.0/gcc/ubsan.c ../gcc-6.3.0/gcc/ubsan.c.orig 
+ 2170  ../gcc-6.3.0/configure --prefix=/opt/cross-pi-gcc --target=arm-linux-gnueabihf --enable-languages=c,c++,fortran --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-multilib
+ 2171  make -j 4 all-gcc
+ 2172  make install-gcc
+ 2173  cd ../
+ 2174  ls
+ 2175  mkdir build-glibc
+ 2176  cd build-glibc/
+ 2177  ls
+ 2178  ../glibc-2.24/configure --prefix=/opt/cross-pi-gcc/arm-linux-gnueabihf --build=$MACHTYPE --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf --with-arch=armv6 --with-fpu=vfp --with-float=hard --with-headers=/opt/cross-pi-gcc/arm-linux-gnueabihf/include --disable-multilib libc_cv_forced_unwind=yes
+ 2179  make install-bootstrap-headers=yes install-headers
+ 2180  make -j4 csu/subdir_lib
+ 2181  install csu/crt1.o csu/crti.o csu/crtn.o /opt/cross-pi-gcc/arm-linux-gnueabihf/lib
+ 2182  arm-linux-gnueabihf-gcc -nostdlib -nostartfiles -shared -x c /dev/null -o /opt/cross-pi-gcc/arm-linux-gnueabihf/lib/libc.so
+ 2183  touch /opt/cross-pi-gcc/arm-linux-gnueabihf/include/gnu/stubs.h
+ 2184  cd ../build-gcc
+ 2185  make -j4 all-target-libgcc
+ 2186  make install-target-libgcc
+ 2187  cd ../build-glibc/
+ 2188  make -j 4
+ 2189  make install
+ 2190  cd ../build-gcc/
+ 2191  make -j 4
+ 2192  make install
+ 2193  cd ../gcc-9.1.0/
+ 2194  ls
+ 2195  contrib/download_prerequisites 
+ 2196  cd ../
+ 2197  history 
+
+
+pi@mypi3-8:~/cross-compiler $ ld -v
+GNU ld (GNU Binutils for Raspbian) 2.28
+pi@mypi3-8:~/cross-compiler $ ldd --version
+ldd (Debian GLIBC 2.24-11+deb9u4) 2.24
+Copyright (C) 2016 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+Written by Roland McGrath and Ulrich Drepper.
+
+backing /opt/cross-pi-gcc from ws010 /opt/cross-pi-gcc to mypi3-8
+
+pi@mypi3-8:~/cross-compiler/ubuntu-cross-compiler $ rsync -avl --delete vidal@ws010:/opt/cross-pi-gcc .
+
+vidal@ws010:~$ cd testbuilds/test-cross-compiler/
+vidal@ws010:~/testbuilds/test-cross-compiler$ . myenv.sh 
+/opt/cross-pi-gcc/arm-linux-gnueabihf/:/opt/cross-pi-gcc/bin:/home/vidal/bin:/home/vidal/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+vidal@ws010:~/testbuilds/test-cross-compiler$ ./buildpi_lift.sh
+
+pi@mypi3-8:~/cross-compiler $ rsync -avl --delete vidal@ws010:~/testbuilds/test-cross-compiler .
+vidal@ws010's password: 
+receiving incremental file list
+deleting test-cross-compiler/dwt.bin
+test-cross-compiler/
+test-cross-compiler/lifting.o
+test-cross-compiler/pi_jpeg
+test-cross-compiler/pi_jpeg.o
+test-cross-compiler/pi_jpeg.txt
+
+sent 740 bytes  received 997 bytes  315.82 bytes/sec
+total size is 362,463  speedup is 208.67
+
+pi@mypi3-8:~/cross-compiler/test-cross-compiler $ ./pi_jpeg 0 1 pi_jpeg
+buf_red = 0x76d33008
+fwd_inv = 0x1929008
+spliting red sub band
+fwd lifting step only
+x = 0xe22247c sp = 0xe2 z = 0xe200000
+x = 0xde22083 sp = 0xde z = 0xde00000
+x = 0xe221475 sp = 0xe2 z = 0xe200000
+x = 0xe32207b sp = 0xe3 z = 0xe300000
+x = 0xa812055 sp = 0xa8 z = 0xa800000
+x = 0xb210c4c sp = 0xb2 z = 0xb200000
+w = 0x100 buf_red wptr = 0x76d33008 alt =  0x76d73008 fwd_inverse =  0x1929008 fwd_inverse =  0x1 
+starting red dwt
+in singlelift 
+in singlelift 
+in singlelift 
+in singlelift 
+in singlelift 
+in singlelift 
+testing test_fwd 
+finished ted dwt
+
