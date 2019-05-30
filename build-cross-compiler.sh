@@ -89,16 +89,14 @@ make install
 #to do a partial build of GCC, a partial build of Glibc and finally build GCC and Glibc.
 #You can read more about this in Preshing’s article.
 
- 
-#mkdir build-gcc
-cd build-gcc
+ cd ../build-gcc
 ../gcc-6.3.0/configure --prefix=/opt/cross-pi-gcc --target=arm-linux-gnueabihf --enable-languages=c,c++,fortran --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-multilib
 make -j4 all-gcc
 make install-all
-cd ../
+
 #Now, let’s partially build Glibc:
 
-cd build-glibc/
+cd ../build-glibc/
 ../glibc-2.24/configure --prefix=/opt/cross-pi-gcc/arm-linux-gnueabihf --build=$MACHTYPE --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf --with-arch=armv6 --with-fpu=vfp --with-float=hard --with-headers=/opt/cross-pi-gcc/arm-linux-gnueabihf/include --disable-multilib libc_cv_forced_unwind=yes
 make install-bootstrap-headers=yes install-headers
 make -j4 csu/subdir_lib
@@ -121,9 +119,9 @@ make install
 cd ../build-gcc/
 make -j 4
 make install
-cd ../
 
-cd build-gcc9
+
+cd ../build-gcc9
 ../gcc-9.1.0/configure --prefix=/opt/cross-pi-gcc --target=arm-linux-gnueabihf --enable-languages=c,c++,fortran --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-multilib
 make -j4
 #make install
