@@ -9,7 +9,7 @@ cd ~/testbuilds/gcc_all/
 
 date > build.log
 pwd >> build.log
-cat "start of build process" >> build.log
+echo "start of build process" >> build.log
 
 mkdir build-binutils
 mkdir build-gcc
@@ -32,7 +32,7 @@ tar xf gcc-9.1.0.tar.gz
 
 rm *.tar.*
 ls >> build.log
-cat "required software downloaded"  >> build.log
+echo "required software downloaded"  >> build.log
 
 #GCC also needs some prerequisites which we can download inside the source folder:
 cd gcc-6.3.0/
@@ -49,7 +49,7 @@ rm *.tar.*
 cp gcc/ubsan.c gcc/ubsan.c.orig
 cp ~/ubsan.c  ~/testbuilds/gcc_all/gcc-6.3.0/gcc
 diff gcc/ubsan.c gcc/ubsan.c.orig > ../diffubsan.txt
-cat "patched ubsan.c " >> ../build.log
+echo "patched ubsan.c " >> ../build.log
 
 cd ../gcc-9.1.0/
 contrib/download_prerequisites
@@ -65,7 +65,7 @@ cp ~/asan_linux.cc libsanitizer/asan/
 #< #endif
 
 diff libsanitizer/asan/asan_linux.cc libsanitizer/asan/asan_linux.cc.orig > ../diffasan_linux.txt
-cat "patched asan_linux.cc " >> ../build.log
+echo "patched asan_linux.cc " >> ../build.log
 
 cd ../
 
@@ -76,14 +76,14 @@ cd ../
 sudo mkdir -p /opt/cross-pi-gcc
 sudo chown $USER /opt/cross-pi-gcc
 export PATH=/opt/cross-pi-gcc/bin:$PATH
-cat "created folder for built gcc" >> build.log
+echo "created folder for built gcc" >> build.log
 
 #Copy the kernel headers in the above folder, see Raspbian documentation for more info about the kernel:
 cd linux/
 KERNEL=kernel7
 make ARCH=arm INSTALL_HDR_PATH=/opt/cross-pi-gcc/arm-linux-gnueabihf headers_install
 cd ../
-cat "created linux headers" >> build.log
+echo "created linux headers" >> build.log
 #Biuld the binutils-2.28
 
 
@@ -92,7 +92,7 @@ cd build-binutils/
 make -j4
 make install
 pwd >> ../build.log
-cat "binultils installed" >> ../build.log
+echo "binultils installed" >> ../build.log
 
 #GCC and Glibc are interdependent, you can’t fully build one without the other, so we are going 
 #to do a partial build of GCC, a partial build of Glibc and finally build GCC and Glibc.
@@ -102,7 +102,7 @@ cd ../build-gcc
 ../gcc-6.3.0/configure --prefix=/opt/cross-pi-gcc --target=arm-linux-gnueabihf --enable-languages=c,c++,fortran --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-multilib
 make -j4 all-gcc
 make install-all
-cat "all-gcc installed" >> ../build.log
+echo "all-gcc installed" >> ../build.log
 
 #Now, let’s partially build Glibc:
 
@@ -114,29 +114,29 @@ install csu/crt1.o csu/crti.o csu/crtn.o /opt/cross-pi-gcc/arm-linux-gnueabihf/l
 arm-linux-gnueabihf-gcc -nostdlib -nostartfiles -shared -x c /dev/null -o /opt/cross-pi-gcc/arm-linux-gnueabihf/lib/libc.so
 touch /opt/cross-pi-gcc/arm-linux-gnueabihf/include/gnu/stubs.h
 
-cat "partial glibc built" >> build.log
+echo "partial glibc built" >> ../build.log
 date >> ../build.log
 
 #Back to GCC:
 cd ../build-gcc
 make -j4 all-target-libgcc
 make install-target-libgcc
-cat "target libgcc installed " >> build.log
+echo "target libgcc installed " >> build.log
 date >> ../build.log
 
 #Finish building Glibc:
 cd ../build-glibc/
 make -j4
 make install
-cat "finished glibc" >> ../build.log
+echo "finished glibc" >> ../build.log
 date >> ../build.log
 
 #Finish building GCC 6.3.0:
 cd ../build-gcc/
 make -j 4
 make install
-cat "finished gcc installed" >> ../build.log
-cat "wc of old 4027" >> ../build.log
+echo "finished gcc installed" >> ../build.log
+echo "wc of old 4027" >> ../build.log
 tree /opt/cross-pi-gcc | wc >> ../build.log
 date >> ../build.log
 
