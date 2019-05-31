@@ -1,0 +1,23 @@
+Fri May 31 06:53:13 MDT 2019
+/home/vidal/testbuilds/gcc_all
+build-binutils
+build-gcc
+build-gcc9
+build-glibc
+build.log
+binutils-2.28
+build-binutils
+build-gcc
+build-gcc9
+build-glibc
+build.log
+gcc-6.3.0
+gcc-9.1.0
+glibc-2.24
+linux
+/home/vidal/testbuilds/gcc_all/build-binutils
+Fri May 31 08:43:35 MDT 2019
+Fri May 31 08:57:01 MDT 2019
+Fri May 31 08:57:01 MDT 2019
+   1681    8124   81261
+Fri May 31 08:58:30 MDT 2019

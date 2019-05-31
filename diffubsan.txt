@@ -1,0 +1,4 @@
+1474c1474
+<       || xloc.file[0] == '\0' || xloc.file[0] == '\xff'
+---
+>       || xloc.file == '\0' || xloc.file[0] == '\xff'
