@@ -5,6 +5,23 @@
 #2061	target-libgcc
 #3133	finish glibc
 #4027	finish gcc
+#5407	9.1.0
+#06/01/19
+-rw-rw-r--  1 vidal vidal  28054929 May 31 20:03 binutils-2.28.tjz
+-rw-rw-r--  1 vidal vidal 590856458 Jun  1 08:54 cross-pi-gcc.tjz
+-rw-rw-r--  1 vidal vidal 104957532 May 31 20:06 gcc-6.3.0.tjz
+-rw-rw-r--  1 vidal vidal 102244175 May 31 20:11 gcc-9.1.0.tjz
+-rw-rw-r--  1 vidal vidal  22002565 May 31 20:04 glibc-2.24.tjz
+-rw-rw-r--  1 vidal vidal 317494562 May 31 20:14 linux.tjz
+-rw-rw-r--  1 vidal vidal 306592681 May 31 19:58 patchedgcc6.3-binutils2.28-glibc2.24.tjz
+vidal@ws010:~/ubuntu-cross-compiler$ md5sum *.tjz
+7bb811e10fde772aa6188d6d00815aed  binutils-2.28.tjz
+74582dfbc6d7225e7dda2752b4ff0f84  cross-pi-gcc.tjz
+d0bc9008a92f0817330cecd685e4d092  gcc-6.3.0.tjz
+f839b6ba3f790c6a99114e1f5a09b536  gcc-9.1.0.tjz
+de2f4fdcb3f396bef4a1c95c2a0eaebb  glibc-2.24.tjz
+1ca4ecd9f27f61abbb501b3033f20172  linux.tjz
+9c9c6a9c332bf63d57a2e2340ba78014  patchedgcc6.3-binutils2.28-glibc2.24.tjz
 #05/31/19
 pi@mypi3-8:~/cross-compiler/test-cross-compiler $ scp vidal@w010:~/cross-compiler/test-cross-compiler/pi_jpeg .
 pi@mypi3-8:~/cross-compiler/test-cross-compiler $ ./pi_jpeg 0 1
