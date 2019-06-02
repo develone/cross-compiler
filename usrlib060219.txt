@@ -1,0 +1,228 @@
+total 34000
+drwxr-xr-x 107 root root   12288 May 27 15:52 .
+drwxr-xr-x  11 root root    4096 Apr  8 04:09 ..
+drwxr-xr-x   5 root root    4096 Apr  8 03:44 apt
+drwxr-xr-x  99 root root   86016 May 27 15:53 arm-linux-gnueabihf
+drwxr-xr-x   5 root root    4096 May 27 15:52 arm-none-eabi
+drwxr-xr-x   3 root root   12288 Apr  8 04:00 aspell
+drwxr-xr-x   2 root root    4096 Apr  8 03:51 avahi
+drwxr-xr-x   2 root root    4096 Feb 17 01:22 binfmt.d
+drwxr-xr-x   2 root root    4096 May 27 15:41 binfmt-support
+drwxr-xr-x   2 root root    4096 Apr  8 04:08 blt2.5
+drwxr-xr-x   2 root root    4096 Apr  8 03:51 bluetooth
+drwxr-xr-x   6 root root    4096 Apr  8 04:04 chromium-browser
+drwxr-xr-x   4 root root    4096 May 27 15:43 clang
+drwxr-xr-x   2 root root    4096 Apr  8 03:51 compat-ld
+drwxr-xr-x   3 root root    4096 Apr  8 04:06 cups
+drwxr-xr-x   2 root root    4096 Apr  8 03:51 dbus-1.0
+drwxr-xr-x   2 root root    4096 Apr  8 04:00 dconf
+drwxr-xr-x   4 root root    4096 May 27 15:42 debug
+drwxr-xr-x   2 root root    4096 Apr  8 03:58 dhcpcd5
+drwxr-xr-x   3 root root    4096 Apr  8 03:44 dpkg
+drwxr-xr-x   4 root root    4096 Apr  8 04:20 electron
+drwxr-xr-x   3 root root    4096 Apr  8 04:00 emacsen-common
+drwxr-xr-x   6 root root    4096 Apr  8 04:18 erlang
+drwxr-xr-x   2 root root    4096 Apr  8 03:51 file
+drwxr-xr-x   4 root root    4096 May 27 15:48 gcc
+drwxr-xr-x   2 root root    4096 Apr  8 04:24 gcj
+drwxr-xr-x   2 root root    4096 May 27 15:43 gettext
+drwxr-xr-x  33 root root    4096 May 27 15:42 ghc
+drwxr-xr-x   3 root root    4096 May 27 15:44 gimp
+drwxr-xr-x   2 root root    4096 May 27 15:44 girepository-1.0
+drwxr-xr-x   3 root root    4096 Apr  8 04:04 git-core
+drwxr-xr-x   2 root root    4096 Apr  8 04:00 glib-networking
+drwxr-xr-x   2 root root    4096 Apr  8 03:44 gnupg
+drwxr-xr-x   2 root root    4096 Apr  8 03:44 gnupg2
+drwxr-xr-x   2 root root    4096 May 27 15:44 gnuplot
+drwxr-xr-x   2 root root    4096 Apr  8 03:51 gold-ld
+drwxr-xr-x   3 root root    4096 May 27 15:47 GraphicsMagick-1.4
+drwxr-xr-x   2 root root    4096 May 27 15:52 graphviz
+drwxr-xr-x   4 root root    4096 Apr  8 03:44 groff
+drwxr-xr-x   2 root root    4096 Apr  8 04:01 gvfs
+drwxr-xr-x   3 root root    4096 May 27 15:47 haskell-packages
+drwxr-xr-x   2 root root    4096 Apr  8 04:00 ispell
+drwxr-xr-x   5 root root    4096 May 27 15:43 jvm
+drwxr-xr-x   3 root root    4096 Feb 17 01:22 kernel
+drwxr-xr-x   3 root root    4096 May 27 15:46 kicad
+drwxr-xr-x   3 root root    4096 May 17  2016 klibc
+drwxr-xr-x   2 root root    4096 Apr  8 04:08 lapack
+drwxr-xr-x   2 root root    4096 Apr  8 03:51 ldscripts
+lrwxrwxrwx   1 root root      15 Dec  3  2016 libann.so.0 -> libann.so.0.0.0
+-rw-r--r--   1 root root   51128 Dec  3  2016 libann.so.0.0.0
+lrwxrwxrwx   1 root root      18 Jul  2  2016 libarpack.so.2 -> libarpack.so.2.0.0
+-rw-r--r--   1 root root  268636 Jul  2  2016 libarpack.so.2.0.0
+drwxr-xr-x   2 root root    4096 Apr  8 04:08 libblas
+lrwxrwxrwx   1 root root      30 Apr  8 04:11 libblas.so.3 -> /etc/alternatives/libblas.so.3
+lrwxrwxrwx   1 root root      32 May 27 15:52 libblas.so.3gf -> /etc/alternatives/libblas.so.3gf
+-rw-r--r--   1 root root 1115072 Nov 30  2015 libBLT.2.5.so.8.6
+-rw-r--r--   1 root root  255496 Nov 30  2015 libBLTlite.2.5.so.8.6
+lrwxrwxrwx   1 root root      15 Feb 19  2017 libcdt.so.5 -> libcdt.so.5.0.0
+-rw-r--r--   1 root root   21972 Feb 19  2017 libcdt.so.5.0.0
+lrwxrwxrwx   1 root root      18 Feb 19  2017 libcgraph.so.6 -> libcgraph.so.6.0.0
+-rw-r--r--   1 root root   72400 Feb 19  2017 libcgraph.so.6.0.0
+-rw-r--r--   1 root root 1061368 Feb  6  2016 libcmumps_seq-4.10.0.so
+lrwxrwxrwx   1 root root      20 Apr 26  2012 libcompface.so.1 -> libcompface.so.1.0.0
+-rw-r--r--   1 root root   20344 Apr 26  2012 libcompface.so.1.0.0
+-rw-r--r--   1 root root 1049064 Feb  6  2016 libdmumps_seq-4.10.0.so
+-rw-r--r--   1 root root  793556 Jan 23  2017 libgettextlib-0.19.8.1.so
+-rw-r--r--   1 root root  274452 Jan 23  2017 libgettextsrc-0.19.8.1.so
+lrwxrwxrwx   1 root root      23 Dec 26  2017 libgimp-2.0.so.0 -> libgimp-2.0.so.0.800.18
+-rw-r--r--   1 root root  238988 Dec 26  2017 libgimp-2.0.so.0.800.18
+lrwxrwxrwx   1 root root      27 Dec 26  2017 libgimpbase-2.0.so.0 -> libgimpbase-2.0.so.0.800.18
+-rw-r--r--   1 root root   75180 Dec 26  2017 libgimpbase-2.0.so.0.800.18
+lrwxrwxrwx   1 root root      28 Dec 26  2017 libgimpcolor-2.0.so.0 -> libgimpcolor-2.0.so.0.800.18
+-rw-r--r--   1 root root   42340 Dec 26  2017 libgimpcolor-2.0.so.0.800.18
+lrwxrwxrwx   1 root root      29 Dec 26  2017 libgimpconfig-2.0.so.0 -> libgimpconfig-2.0.so.0.800.18
+-rw-r--r--   1 root root   54664 Dec 26  2017 libgimpconfig-2.0.so.0.800.18
+lrwxrwxrwx   1 root root      27 Dec 26  2017 libgimpmath-2.0.so.0 -> libgimpmath-2.0.so.0.800.18
+-rw-r--r--   1 root root   17764 Dec 26  2017 libgimpmath-2.0.so.0.800.18
+lrwxrwxrwx   1 root root      29 Dec 26  2017 libgimpmodule-2.0.so.0 -> libgimpmodule-2.0.so.0.800.18
+-rw-r--r--   1 root root   17764 Dec 26  2017 libgimpmodule-2.0.so.0.800.18
+lrwxrwxrwx   1 root root      28 Dec 26  2017 libgimpthumb-2.0.so.0 -> libgimpthumb-2.0.so.0.800.18
+-rw-r--r--   1 root root   30052 Dec 26  2017 libgimpthumb-2.0.so.0.800.18
+lrwxrwxrwx   1 root root      25 Dec 26  2017 libgimpui-2.0.so.0 -> libgimpui-2.0.so.0.800.18
+-rw-r--r--   1 root root  108236 Dec 26  2017 libgimpui-2.0.so.0.800.18
+lrwxrwxrwx   1 root root      30 Dec 26  2017 libgimpwidgets-2.0.so.0 -> libgimpwidgets-2.0.so.0.800.18
+-rw-r--r--   1 root root 1160612 Dec 26  2017 libgimpwidgets-2.0.so.0.800.18
+drwxr-xr-x   2 root root    4096 Apr  8 04:01 libgksu
+lrwxrwxrwx   1 root root      17 Sep 26  2016 libgksu2.so.0 -> libgksu2.so.0.0.2
+-rw-r--r--   1 root root   51656 Sep 26  2016 libgksu2.so.0.0.2
+lrwxrwxrwx   1 root root      24 Mar  4  2017 libgnome-menu-3.so.0 -> libgnome-menu-3.so.0.0.1
+-rw-r--r--   1 root root   92340 Mar  4  2017 libgnome-menu-3.so.0.0.1
+lrwxrwxrwx   1 root root      33 Oct 21  2018 libGraphicsMagick++-Q16.so.12 -> libGraphicsMagick++-Q16.so.12.3.2
+-rw-r--r--   1 root root  337364 Oct 21  2018 libGraphicsMagick++-Q16.so.12.3.2
+lrwxrwxrwx   1 root root      31 Oct 21  2018 libGraphicsMagick-Q16.so.3 -> libGraphicsMagick-Q16.so.3.18.1
+-rw-r--r--   1 root root 3053192 Oct 21  2018 libGraphicsMagick-Q16.so.3.18.1
+lrwxrwxrwx   1 root root      34 Oct 21  2018 libGraphicsMagickWand-Q16.so.2 -> libGraphicsMagickWand-Q16.so.2.9.0
+-rw-r--r--   1 root root  169260 Oct 21  2018 libGraphicsMagickWand-Q16.so.2.9.0
+lrwxrwxrwx   1 root root      15 Feb 19  2017 libgvc.so.6 -> libgvc.so.6.0.0
+-rw-r--r--   1 root root  495576 Feb 19  2017 libgvc.so.6.0.0
+lrwxrwxrwx   1 root root      16 Feb 19  2017 libgvpr.so.2 -> libgvpr.so.2.0.0
+-rw-r--r--   1 root root  407648 Feb 19  2017 libgvpr.so.2.0.0
+lrwxrwxrwx   1 root root      27 Sep 19  2016 libhardsid-builder.so.0 -> libhardsid-builder.so.0.0.1
+-rw-r--r--   1 root root   12568 Sep 19  2016 libhardsid-builder.so.0.0.1
+lrwxrwxrwx   1 root root      16 Nov 11  2016 libident.so.0 -> libident.so.0.22
+-rw-r--r--   1 root root    7976 Nov 11  2016 libident.so.0.22
+lrwxrwxrwx   1 root root      17 Sep 11  2015 libipopt.so.1 -> libipopt.so.1.9.9
+-rw-r--r--   1 root root 2317880 Sep 11  2015 libipopt.so.1.9.9
+lrwxrwxrwx   1 root root      21 Nov 13  2015 libkeybinder.so.0 -> libkeybinder.so.0.1.0
+-rw-r--r--   1 root root    9588 Nov 13  2015 libkeybinder.so.0.1.0
+lrwxrwxrwx   1 root root      32 Apr  8 04:12 liblapack.so.3 -> /etc/alternatives/liblapack.so.3
+lrwxrwxrwx   1 root root      34 May 27 15:52 liblapack.so.3gf -> /etc/alternatives/liblapack.so.3gf
+lrwxrwxrwx   1 root root      19 Jan  4  2017 liblilv-0.so.0 -> liblilv-0.so.0.24.2
+-rw-r--r--   1 root root   75064 Jan  4  2017 liblilv-0.so.0.24.2
+-rw-r--r--   1 root root   25600 Feb  6  2016 libmpiseq_seq-4.10.0.so
+-rw-r--r--   1 root root  256624 Feb  6  2016 libmumps_common_seq-4.10.0.so
+-rw-r--r--   1 root root 7785520 Jun 25  2017 libopenblas_armv6p-r0.2.19.so
+lrwxrwxrwx   1 root root      29 Jun 25  2017 libopenblas.so.0 -> libopenblas_armv6p-r0.2.19.so
+lrwxrwxrwx   1 root root      20 Feb 19  2017 libpathplan.so.4 -> libpathplan.so.4.0.0
+-rw-r--r--   1 root root   26052 Feb 19  2017 libpathplan.so.4.0.0
+-rw-r--r--   1 root root   86112 Sep 11  2017 libpigpiod_if2.so
+-rw-r--r--   1 root root   73824 Sep 11  2017 libpigpiod_if.so
+-rw-r--r--   1 root root  246952 Sep 11  2017 libpigpio.so
+lrwxrwxrwx   1 root root      24 Feb 16  2017 libpigpioultrasonic.so -> libpigpioultrasonic.so.1
+-rw-r--r--   1 root root    8828 Apr 25  2016 libpigpioultrasonic.so.1
+lrwxrwxrwx   1 root root      18 Aug 14  2015 libpisock.so.9 -> libpisock.so.9.0.2
+-rw-r--r--   1 root root  204468 Aug 14  2015 libpisock.so.9.0.2
+-rw-r--r--   1 root root   75728 Feb  6  2016 libpord_seq-4.10.0.so
+lrwxrwxrwx   1 root root      32 Aug  2  2016 libpyglib-2.0-python2.7.so.0 -> libpyglib-2.0-python2.7.so.0.0.0
+-rw-r--r--   1 root root   11684 Aug  2  2016 libpyglib-2.0-python2.7.so.0.0.0
+lrwxrwxrwx   1 root root      21 Jan  9  2017 libpypy-c.so -> pypy/bin/libpypy-c.so
+lrwxrwxrwx   1 root root      24 Nov 13  2016 libqscintilla2.so.12 -> libqscintilla2.so.12.0.2
+lrwxrwxrwx   1 root root      24 Nov 13  2016 libqscintilla2.so.12.0 -> libqscintilla2.so.12.0.2
+-rw-r--r--   1 root root 3216400 Nov 13  2016 libqscintilla2.so.12.0.2
+lrwxrwxrwx   1 root root      26 Nov 13  2016 libqt5scintilla2.so.12 -> libqt5scintilla2.so.12.0.2
+lrwxrwxrwx   1 root root      26 Nov 13  2016 libqt5scintilla2.so.12.0 -> libqt5scintilla2.so.12.0.2
+-rw-r--r--   1 root root 3262260 Nov 13  2016 libqt5scintilla2.so.12.0.2
+lrwxrwxrwx   1 root root      19 Sep  5  2016 libqwt-qt5.so.6 -> libqwt-qt5.so.6.1.2
+lrwxrwxrwx   1 root root      19 Sep  5  2016 libqwt-qt5.so.6.1 -> libqwt-qt5.so.6.1.2
+-rw-r--r--   1 root root 1116892 Sep  5  2016 libqwt-qt5.so.6.1.2
+drwxr-xr-x   5 root root    4096 Apr  8 04:22 libreoffice
+lrwxrwxrwx   1 root root      25 Sep 19  2016 libresid-builder.so.0 -> libresid-builder.so.0.0.1
+-rw-r--r--   1 root root  170832 Sep 19  2016 libresid-builder.so.0.0.1
+lrwxrwxrwx   1 root root      16 Jul  4  2017 libRTIMULib.so -> libRTIMULib.so.7
+lrwxrwxrwx   1 root root      20 Jul  4  2017 libRTIMULib.so.7 -> libRTIMULib.so.7.2.1
+-rw-r--r--   1 root root  151088 Jul  4  2017 libRTIMULib.so.7.2.1
+lrwxrwxrwx   1 root root      19 Feb  9 14:39 libscsynth.so.1 -> libscsynth.so.1.0.0
+-rw-r--r--   1 root root  423392 Feb  9 14:39 libscsynth.so.1.0.0
+lrwxrwxrwx   1 root root      20 Sep 19  2016 libsidplay2.so.1 -> libsidplay2.so.1.0.1
+-rw-r--r--   1 root root  204980 Sep 19  2016 libsidplay2.so.1.0.1
+lrwxrwxrwx   1 root root      20 May 23  2012 libsigc-1.2.so.5 -> libsigc-1.2.so.5.0.7
+-rw-r--r--   1 root root   23724 May 23  2012 libsigc-1.2.so.5.0.7
+-rw-r--r--   1 root root 1045928 Feb  6  2016 libsmumps_seq-4.10.0.so
+lrwxrwxrwx   1 root root      14 Apr  3  2017 libsrtp.so.0 -> libsrtp.so.0.0
+-rw-r--r--   1 root root   90620 Apr  3  2017 libsrtp.so.0.0
+-rw-r--r--   1 root root   16500 Aug 29  2016 libsupp.a
+lrwxrwxrwx   1 root root      24 Sep 19  2014 libunique-1.0.so.0 -> libunique-1.0.so.0.100.6
+-rw-r--r--   1 root root   43064 Sep 19  2014 libunique-1.0.so.0.100.6
+drwxr-xr-x   2 root root    4096 Apr  8 04:01 libvte9
+lrwxrwxrwx   1 root root      18 Jun 24  2012 libvte.so.9 -> libvte.so.9.2800.2
+-rw-r--r--   1 root root  570448 Jun 24  2012 libvte.so.9.2800.2
+lrwxrwxrwx   1 root root      22 Apr  8 04:09 libwiringPiDev.so -> libwiringPiDev.so.2.50
+-rwxr-xr-x   1 root root   28420 Mar 13 07:41 libwiringPiDev.so.2.50
+lrwxrwxrwx   1 root root      19 Apr  8 04:09 libwiringPi.so -> libwiringPi.so.2.50
+-rwxr-xr-x   1 root root   70708 Mar 13 07:41 libwiringPi.so.2.50
+lrwxrwxrwx   1 root root      16 Feb 19  2017 libxdot.so.4 -> libxdot.so.4.0.0
+-rw-r--r--   1 root root   17840 Feb 19  2017 libxdot.so.4.0.0
+-rw-r--r--   1 root root 1065452 Feb  6  2016 libzmumps_seq-4.10.0.so
+drwxr-xr-x   6 root root    4096 May 27 15:48 llvm-3.7
+drwxr-xr-x   8 root root    4096 May 27 15:48 llvm-3.8
+drwxr-xr-x   3 root root    4096 May 27 15:31 locale
+drwxr-xr-x   2 root root    4096 Apr  8 04:22 lp_solve
+drwxr-xr-x   2 root root    4096 Apr  8 03:44 man-db
+drwxr-xr-x   2 root root    4096 Apr  8 04:01 menu-cache
+drwxr-xr-x   3 root root    4096 Apr  8 03:50 mime
+drwxr-xr-x   2 root root    4096 Feb 17 01:22 modules-load.d
+drwxr-xr-x   4 root root    4096 Apr  8 04:19 mypy
+drwxr-xr-x   3 root root    4096 Apr  8 03:58 NetworkManager
+drwxr-xr-x   2 root root    4096 May  2  2018 nodejs
+drwxr-xr-x  11 root root    4096 Apr  8 04:19 node_modules
+drwxr-xr-x   2 root root    4096 May 27 15:44 openblas-base
+drwxr-xr-x   2 root root    4096 Apr  8 03:50 openssh
+-rw-r--r--   1 root root     278 Feb 17 08:05 os-release
+drwxr-xr-x   2 root root    4096 Apr  8 04:06 packagekit
+drwxr-xr-x   2 root root    4096 Jul 19  2011 perl5
+drwxr-xr-x   2 root root    4096 Apr  8 04:09 piclone
+drwxr-xr-x   2 root root    4096 Apr  8 04:09 pipanel
+drwxr-xr-x   2 root root    4096 May  7  2016 pkgconfig
+-rw-r--r--   1 root root      20 May  7  2016 pkg-config.multiarch
+drwxr-xr-x   3 root root    4096 Apr  8 03:58 pm-utils
+drwxr-xr-x   2 root root    4096 Apr  8 03:51 policykit-1
+-rw-r--r--   1 root root   34552 Jan 23  2017 preloadable_libintl.so
+drwxr-xr-x   8 root root    4096 Apr  8 04:08 pypy
+drwxr-xr-x  28 root root   16384 Apr  8 04:08 python2.7
+drwxr-xr-x   3 root root    4096 May 21  2017 python3
+drwxr-xr-x  34 root root    4096 Apr  8 04:19 python3.5
+drwxr-xr-x   2 root root    4096 Apr  8 04:05 qpdfview
+drwxr-xr-x   2 root root    4096 Apr  8 03:51 raspberrypi-sys-mods
+drwxr-xr-x   2 root root    4096 Apr  8 03:48 raspi-config
+drwxr-xr-x   2 root root    4096 Apr  8 04:08 rc-gui
+drwxr-xr-x   2 root root    4096 Apr  8 04:09 rp-prefapps
+drwxr-xr-x   5 root root    4096 Apr  8 04:18 ruby
+drwxr-xr-x   2 root root    4096 Mar 19  2017 sasl2
+drwxr-xr-x   3 root root    4096 Apr  8 04:19 scratch
+drwxr-xr-x  14 root root    4096 Apr  8 04:20 scratch2
+drwxr-xr-x   2 root root    4096 Apr  8 04:23 security
+lrwxrwxrwx   1 root root      19 Mar  1 09:19 sftp-server -> openssh/sftp-server
+drwxr-xr-x   4 root root    4096 Apr  8 04:19 squeak
+drwxr-xr-x   3 root root    4096 Apr  8 03:51 ssl
+drwxr-xr-x   2 root root    4096 Apr  8 03:52 sudo
+drwxr-xr-x   3 root root    4096 Apr  8 04:19 SuperCollider
+drwxr-xr-x   8 root root    4096 Apr  8 04:07 systemd
+drwxr-xr-x   2 root root    4096 Oct 30  2016 tar
+drwxr-xr-x   4 root root    4096 Apr  8 03:44 tasksel
+drwxr-xr-x   2 root root    4096 Apr  8 03:44 tc
+drwxr-xr-x   2 root root    4096 May 27 15:48 tcl8.6
+lrwxrwxrwx   1 root root      19 Nov 26  2015 tclConfig.sh -> tcl8.6/tclConfig.sh
+lrwxrwxrwx   1 root root      21 Nov 26  2015 tclooConfig.sh -> tcl8.6/tclooConfig.sh
+drwxr-xr-x   3 root root    4096 Apr  8 04:08 tcltk
+drwxr-xr-x   2 root root    4096 May 27 15:48 texinfo
+drwxr-xr-x   2 root root    4096 Apr  8 04:01 thunar-archive-plugin
+drwxr-xr-x   3 root root    4096 Apr  8 04:06 timidity
+drwxr-xr-x   2 root root    4096 May 27 15:41 tmpfiles.d
+drwxr-xr-x   2 root root    4096 Apr  8 04:01 udisks2
+drwxr-xr-x   2 root root    4096 May 27 15:41 valgrind
+drwxr-xr-x   2 root root    4096 Apr  8 04:06 vnc
+drwxr-xr-x   3 root root    4096 May 27 15:46 wx
+drwxr-xr-x   2 root root    4096 May  3  2017 X11
+drwxr-xr-x   3 root root    4096 Apr  8 04:01 xorg
