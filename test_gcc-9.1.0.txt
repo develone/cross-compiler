@@ -1,0 +1,54 @@
+Links in /usr/include & /usr/lib need to be done from
+the command line. See the the file create_link.sh
+The script setgcc-9.1.sh did not work needed to add 
+to ~/.bashrc
+export PATH=/opt/gcc-9.1.0/bin:$PATH
+export LD_LIBRARY_PATH=/opt/gcc-9.1.0/lib:$LD_LIBRARY_PATH
+
+
+
+pi@mypi3-8:~ $ gcc -v
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/6/lto-wrapper
+Target: arm-linux-gnueabihf
+Configured with: ../src/configure -v --with-pkgversion='Raspbian 6.3.0-18+rpi1+deb9u1' --with-bugurl=file:///usr/share/doc/gcc-6/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-6 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-6-armhf/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-6-armhf --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-6-armhf --with-arch-directory=arm --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Thread model: posix
+gcc version 6.3.0 20170516 (Raspbian 6.3.0-18+rpi1+deb9u1) 
+pi@mypi3-8:~ $ gcc-9.1 -v
+Using built-in specs.
+COLLECT_GCC=gcc-9.1
+COLLECT_LTO_WRAPPER=/opt/gcc-9.1.0/libexec/gcc/arm-linux-gnueabihf/9.1.0/lto-wrapper
+Target: arm-linux-gnueabihf
+Configured with: ../gcc-9.1.0/configure --prefix=/opt/gcc-9.1.0 --build=x86_64-pc-linux-gnu --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf --enable-languages=c,c++,fortran --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-multilib --program-suffix=-9.1
+Thread model: posix
+gcc version 9.1.0 (GCC) 
+
+These example programs now work with g++-9.1
+
+g++-9.1 -std=c++17 -Wall -pedantic if_test.cpp -o if_test
+pi@mypi3-8:~ $ cross-compiler/test-cross-compiler/if_test 
+Local variable a is < 8
+
+g++-9.1 -std=c++17 -Wall -pedantic fs_test.cpp -o fs_test
+pi@mypi3-8:~/cross-compiler/test-cross-compiler $ ./fs_test 
+"./rgb_pack.bin"
+"./lifting.c"
+"./helloworld.f"
+"./lifting.h"
+"./pi_jpeg.o"
+"./lifting.o"
+"./helloworld.c"
+"./pi_jpeg.c"
+"./if_test"
+"./fs_test"
+"./if_test.cpp"
+"./fs_test.cpp"
+"./pi_jpeg"
+"./pi_jpeg.txt"
+"./helloworld"
+"./rgb.m"
+"./myenv.sh"
+"./dwt.bin"
+"./buildpi_lift.sh
+g++-9.1 -std=c++17 -Wall -pedantic fs_test.cpp -o fs_test
