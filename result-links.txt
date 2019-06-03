@@ -1,0 +1,28 @@
+pi@mypi3-6wifi:~/cross-compiler $ ls -la /usr/include/sys
+ls: cannot access '/usr/include/sys': No such file or directory
+pi@mypi3-6wifi:~/cross-compiler $ sudo ln -s /usr/include/arm-linux-gnueabihf/sys /usr/include/sys
+pi@mypi3-6wifi:~/cross-compiler $ ls -la /usr/include/syslrwxrwxrwx 1 root root 36 Jun  3 09:03 /usr/include/sys -> /usr/include/arm-linux-gnueabihf/sys
+pi@mypi3-6wifi:~/cross-compiler $ ls -la /usr/include/bits
+ls: cannot access '/usr/include/bits': No such file or directory
+pi@mypi3-6wifi:~/cross-compiler $ sudo ln -s /usr/include/arm-linux-gnueabihf/bits /usr/include/bits
+pi@mypi3-6wifi:~/cross-compiler $ ls -la /usr/include/bitslrwxrwxrwx 1 root root 37 Jun  3 09:04 /usr/include/bits -> /usr/include/arm-linux-gnueabihf/bits
+pi@mypi3-6wifi:~/cross-compiler $ ls -la /usr/include/gnu
+ls: cannot access '/usr/include/gnu': No such file or directory
+pi@mypi3-6wifi:~/cross-compiler $ sudo ln -s /usr/include/arm-linux-gnueabihf/gnu /usr/include/gnu
+pi@mypi3-6wifi:~/cross-compiler $ ls -la /usr/include/gnulrwxrwxrwx 1 root root 36 Jun  3 09:04 /usr/include/gnu -> /usr/include/arm-linux-gnueabihf/gnu
+pi@mypi3-6wifi:~/cross-compiler $ ls -la /usr/include/asm
+ls: cannot access '/usr/include/asm': No such file or directory
+pi@mypi3-6wifi:~/cross-compiler $ sudo ln -s /usr/include/arm-linux-gnueabihf/asm /usr/include/asm
+pi@mypi3-6wifi:~/cross-compiler $ ls -la /usr/include/asmlrwxrwxrwx 1 root root 36 Jun  3 09:05 /usr/include/asm -> /usr/include/arm-linux-gnueabihf/asm
+pi@mypi3-6wifi:~/cross-compiler $ ls -la /usr/lib/crti.o
+ls: cannot access '/usr/lib/crti.o': No such file or directory
+pi@mypi3-6wifi:~/cross-compiler $ sudo ln -s /usr/lib/arm-linux-gnueabihf/crti.o /usr/lib/crti.o
+pi@mypi3-6wifi:~/cross-compiler $ ls -la /usr/lib/crti.olrwxrwxrwx 1 root root 35 Jun  3 09:06 /usr/lib/crti.o -> /usr/lib/arm-linux-gnueabihf/crti.o
+pi@mypi3-6wifi:~/cross-compiler $ ls -la /usr/lib/crt1.o
+ls: cannot access '/usr/lib/crt1.o': No such file or directory
+pi@mypi3-6wifi:~/cross-compiler $ sudo ln -s /usr/lib/arm-linux-gnueabihf/crt1.o /usr/lib/crt1.o
+pi@mypi3-6wifi:~/cross-compiler $ ls -la /usr/lib/crt1.olrwxrwxrwx 1 root root 35 Jun  3 09:07 /usr/lib/crt1.o -> /usr/lib/arm-linux-gnueabihf/crt1.o
+pi@mypi3-6wifi:~/cross-compiler $ sudo ln -s /usr/lib/arm-linux-gnueabihf/crtn.o /usr/lib/crtn.o
+pi@mypi3-6wifi:~/cross-compiler $ ls -la /usr/lib/crtn.0ls: cannot access '/usr/lib/crtn.0': No such file or directory
+pi@mypi3-6wifi:~/cross-compiler $ ls -la /usr/lib/crtn.o
+lrwxrwxrwx 1 root root 35 Jun  3 09:08 /usr/lib/crtn.o -> /usr/lib/arm-linux-gnueabihf/crtn.o
