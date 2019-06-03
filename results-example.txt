@@ -1,0 +1,25 @@
+pi@mypi3-6wifi:~/cross-compiler $ cd test-cross-compiler/
+pi@mypi3-6wifi:~/cross-compiler/test-cross-compiler $ g++-9.1 -std=c++17 -Wall -pedantic if_test.cpp -o if_test
+pi@mypi3-6wifi:~/cross-compiler/test-cross-compiler $ ./if_test 
+Local variable a is < 8
+pi@mypi3-6wifi:~/cross-compiler/test-cross-compiler $ g++-9.1 -std=c++17 -Wall -pedantic fs_test.cpp -o fs_test
+pi@mypi3-6wifi:~/cross-compiler/test-cross-compiler $ ./fs_test 
+"./if_test.cpp"
+"./helloworld"
+"./pi_jpeg.o"
+"./fs_test"
+"./myenv.sh"
+"./dwt.bin"
+"./pi_jpeg"
+"./buildpi_lift.sh"
+"./lifting.c"
+"./lifting.o"
+"./lifting.h"
+"./if_test"
+"./rgb.m"
+"./pi_jpeg.c"
+"./fs_test.cpp"
+"./rgb_pack.bin"
+"./helloworld.c"
+"./pi_jpeg.txt"
+"./helloworld.f"
