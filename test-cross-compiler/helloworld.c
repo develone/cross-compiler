@@ -30,7 +30,7 @@ void split(int ff, int loop, int *ibuf,  int *obuf) {
 		if (ff == 1) y = 0x7fc00;
 		if (ff == 2) y = 0x1ff;
 		z = x & y;
-		printf("x = 0x%x z = 0x%x y = 0x%x \n",x,z,y);
+		//printf("x = 0x%x z = 0x%x y = 0x%x \n",x,z,y);
 		if (ff == 0) sp = z>>20;
 		if (ff == 1) sp = z>>8;
 		if (ff == 2) sp = z;
